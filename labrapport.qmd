@@ -19,7 +19,9 @@ library(ggtext)
 
 poolsample1 <- read_excel("poolsample1.xlsx")
 poolsample2 <- read_excel("poolsample2.xlsx")
-mhc <- read_excel("mhc.xlsx")
+mhc <- read_excel("mhc1.xlsx")
+cv <- read_excel("mhc1.xlsx")
+
 
 
 ```
@@ -45,12 +47,38 @@ mhc <- read_excel("mhc.xlsx")
 #| echo: false
 #| warning: false
 
-mhc = read_excel("mhc.xlsx")%>%
-select(1,2,6,7,11,12,13,14,15,16,17,18 )
 
+mhc = read_excel("mhc1.xlsx")%>%
+  
+select(15,16,17,18)
+mhc_no_NA <- na.omit(mhc)
+
+
+
+gt(mhc)
+
+```
+
+
+
+## CV verdi vurdering av prøvene
+
+rename (19 = "Uke", "Muskelfibertype" = 20, "Snitt" = 21, "SD" = 22, "CV"= 23)
+
+
+```{r}
+#| echo: false
+#| warning: false
+
+cv= read_excel("mhc1.xlsx")%>%
+    select(19,20,21,22,23)
+
+cv_no_NA <- na.omit(cv)
+gt(cv)
 
 
 ```
+
 
 
 
