@@ -1,9 +1,9 @@
 ---
 title: "Labrapport"
 format: html
+bibliography: molekylærlab.bib
+csl: apa.csl
 ---
-
-
 
 ```{r}
 #| include: false
@@ -26,18 +26,11 @@ cv <- read_excel("mhc1.xlsx")
 
 ```
 
-
-
 # Introduksjon
 
-
-
-
+Analyser av genuttrykk med gjennom kvantitativ polymerase kjedereaksjon (qPCR) er fast praksis i mange medisinske treningsstudier [@kuangOverviewTechnicalConsiderations2018]. Reproduserbarheten og reliabiliteten til dataen avhenger i stor grad av hvordan eksperimentene gjennomføres og tolkes [@kuangOverviewTechnicalConsiderations2018]. Selv om denne typen analyse er svært utbredt, finnes det mange ulike protokoller og måter å gjennomføre analysen på [@kuangOverviewTechnicalConsiderations2018]. For å sikre så reliable tester som mulig, er det viktig med en detaljert og nøye protokoll. qPCR benyttes til å måle uttrykket av et målgen fra prøver av blant annet blod og muskelvev. Et vanlig bruksområde innenfor treningsfysiologi er for eksempel å måle treningsinduserte endringer i genutrykk for ulike muskelfibertyper.
 
 # Metode
-
-
-
 
 # Resultat
 
@@ -59,12 +52,9 @@ gt(mhc)
 
 ```
 
-
-
 ## CV verdi vurdering av prøvene
 
 rename (19 = "Uke", "Muskelfibertype" = 20, "Snitt" = 21, "SD" = 22, "CV"= 23)
-
 
 ```{r}
 #| echo: false
@@ -79,10 +69,7 @@ gt(cv)
 
 ```
 
-
-
-
-## Effektivitet av Fortynningsserie 1/10 – 1/100 – 1/1000
+## Effektivitet av Fortynningsserie 1/10 -- 1/100 -- 1/1000
 
 ```{r}
 #| echo: false
@@ -125,8 +112,6 @@ abline(lm(true_values_1 ~ observed_values_1  ), col="red")
 # Optionally, add more formatting or annotations to the plot
 ```
 
-
-
 ```{r}
 #| echo: false
 #| warning: false
@@ -142,8 +127,8 @@ plot(observed_values_2, true_values_2, main="Effektivitet av pcr reaksjon 2", xl
 abline(lm( true_values_2 ~ observed_values_2), col="red")
 ```
 
-
 Tabell 1: Tall fra reaksjon 1
+
 ```{r}
 #| echo: false
 #| warning: false
@@ -153,6 +138,7 @@ gt(poolsample1)
 ```
 
 Tabell 2: Tall fra reaksjon 2
+
 ```{r}
 #| echo: false
 #| warning: false
@@ -160,24 +146,12 @@ Tabell 2: Tall fra reaksjon 2
 gt(poolsample2) 
 ```
 
-
-Anbefalt primer effektivitet er mellom 93 % og 105 % (Kuang 2018).
-Dette viser at på tabell 2 er det en feil i fortynningsrekken. Muligens pipeteringsfeil da elab journal viste usikkerhet rundt hva som var pipettert i ett av kamrene.
-
-
+Anbefalt primer effektivitet er mellom 93 % og 105 % (Kuang 2018). Dette viser at på tabell 2 er det en feil i fortynningsrekken. Muligens pipeteringsfeil da elab journal viste usikkerhet rundt hva som var pipettert i ett av kamrene.
 
 # Diskusjon
 
-
-
 # Konklusjon
-
-
 
 \newpage
 
 # Referanser
-
-
-
-
