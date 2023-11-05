@@ -42,9 +42,11 @@ Vi hadde ferdig cDNA (W0 og W2). Lag et pipetteringsskjema med oversikt over inn
 
 Når platen er ferdig skal den først dekkes med past og sentrifugferes **(...)** før den skal inn i qPCR-maskinen. Innstillingene på maskinen gjør at prosessen går av seg selv. Prosessen består av en "Hold stage" en "PCR stage" som inneholder 40 sykluser, og avslutningsvis er det en "Melt curve stage". Når maskinen er ferdig kan hente ut resultatene av prøvene i alle brønnene. Resultatene kommer i form av CT.
 
+\newpage
+
 # Resultat
 
-## Endring i muskeltype sammensetning W0 og W2
+
 
 ```{r}
 #| echo: false
@@ -53,33 +55,46 @@ Når platen er ferdig skal den først dekkes med past og sentrifugferes **(...)*
 
 mhc = read_excel("mhc1.xlsx")%>%
   
-select(15,16,17,18)
+select(15,16,17)
+
 mhc_no_NA <- na.omit(mhc)
 
 
 
-gt(mhc)
+
 
 ```
 
-## CV verdi vurdering av prøvene
 
-rename (19 = "Uke", "Muskelfibertype" = 20, "Snitt" = 21, "SD" = 22, "CV"= 23)
+```{r}
+#| echo: false
+#| warning: false
+
+gt(mhc)%>%
+    
+ 
+tab_header (title = "Tabell 1: Endring i muskeltype sammensetning W0 og W2")%>%
+        tab_footnote (footnote = "Tallene er i prosent")
+```
+
+
 
 ```{r}
 #| echo: false
 #| warning: false
 
 cv= read_excel("mhc1.xlsx")%>%
-    select(19,20,21,22,23)
+    select(18,19,20,21,22)
 
-cv_no_NA <- na.omit(cv)
-gt(cv)
-
+ 
+  gt(cv)%>%
+tab_header (title = "Tabell 2: Vurdering av CV verdi")%>%
+        tab_footnote (footnote = "18 er uke. 19 muskelfibertype. 20 er snitt ct-verdi. 21 er sd på ct-verdi. 22 er cv-verdi. cv-verdi på 0-5 prosent er gode tall, mens verdi over 10 prosent er avvikstall")
 
 ```
 
-## Effektivitet av Fortynningsserie 1/10 -- 1/100 -- 1/1000
+### Effektivitet av Fortynningsserie 1/10 -- 1/100 -- 1/1000
+
 
 ```{r}
 #| echo: false
@@ -93,6 +108,7 @@ poolsample1 = read_excel("poolsample1.xlsx")%>%
   rename("Fortynningsserie" = 1,
                 "Snitt CT" = `Avg CT`, 
                   "Log" = `Log (sample quan)`)
+  
 
 
 poolsample2 = read_excel("poolsample2.xlsx") %>%
@@ -119,6 +135,9 @@ plot(observed_values_1,true_values_1, main="Effektivitet av pcr reaksjon 1", xla
 # Add a line of best fit
 abline(lm(true_values_1 ~ observed_values_1  ), col="red")
 
+
+
+
 # Optionally, add more formatting or annotations to the plot
 ```
 
@@ -137,26 +156,32 @@ plot(observed_values_2, true_values_2, main="Effektivitet av pcr reaksjon 2", xl
 abline(lm( true_values_2 ~ observed_values_2), col="red")
 ```
 
-Tabell 1: Tall fra reaksjon 1
+
 
 ```{r}
 #| echo: false
 #| warning: false
 
-gt(poolsample1)
+gt(poolsample1)%>%
+tab_header (title = "Tabell 3: Tall fra reaksjon 1")%>%
+        tab_footnote (footnote = "")
 
 ```
 
-Tabell 2: Tall fra reaksjon 2
+
 
 ```{r}
 #| echo: false
 #| warning: false
 
-gt(poolsample2) 
+gt(poolsample2) %>%
+tab_header (title = "Tabell 4: Tall fra reaksjon 2")%>%
+        tab_footnote (footnote = "")
 ```
 
 Anbefalt primer effektivitet er mellom 93 % og 105 % (Kuang 2018). Dette viser at på tabell 2 er det en feil i fortynningsrekken. Muligens pipeteringsfeil da elab journal viste usikkerhet rundt hva som var pipettert i ett av kamrene.
+
+
 
 # Diskusjon
 
