@@ -38,15 +38,13 @@ Prinsippet bak en qPCR-analyse er å følge PCR i sanntid. For å gjennomføre P
 
 Forsøket ble utført over to dager på molekylærlabben på Høgskolen i Innlandet avd. Lillehammer
 
-Vi hadde ferdig cDNA (W0 og W2). Lag et pipetteringsskjema med oversikt over innholdet i alle brønnene på pipetteringsplaten **(?)**. Pipetter 2ul cDNA sammen med 5ul CYBR-green master mix, 1ul av primer mix (MCH1, MHC2a, MHC2x, MCHb2m) og 2ul H~2~O. Gjenta dette slik at du får tre brønner med identisk innhold. Gjør dette med både W0 og W2. Platen skal ogå inneholde en fortynningsserie for både W0 og W2. Forholdene skal være 1/1, 1/10, 1/100, 1/1000, 1/10000, 1/100000 og 1/1000000. Det skal være to brønneer med hver av konsentrasjonene. 1/1 prøven skal inneholde 2ul W0/W2 + 8ul cmyc. Bruk denne prøven som utgangspunkt til å lage fortynningsserien. Fortynn de andre prøvene med **(?)**. Det skal være tre brønner med hver av fortynningene for både W0 og W2.
+Vi hadde ferdig cDNA (W0 og W2). Lag et pipetteringsskjema med oversikt over innholdet i alle brønnene på pipetteringsplaten. Pipetter 2ul cDNA sammen med 5ul CYBR-green master mix, 1ul av primer mix (MCH1, MHC2a, MHC2x, MCHb2m) og 2ul H~2~O. Gjenta dette slik at du får tre brønner med identisk innhold. Gjør dette med både W0 og W2. Platen skal ogå inneholde en fortynningsserie for å teste primerne. Forholdene skal være 1/1, 1/10, 1/100, 1/1000, 1/10000, 1/100000 og 1/1000000. Det skal være to brønner med hver av konsentrasjonene. 1/1 prøven skal inneholde 2ul W0/W2 + 8ul cmyc. Bruk denne prøven som utgangspunkt til å lage fortynningsserien. Fortynn de andre prøvene med H~2~O. Det skal være tre brønner med hver av fortynningene for både W0 og W2.
 
-Når platen er ferdig skal den først dekkes med past og sentrifugferes **(...)** før den skal inn i qPCR-maskinen. Innstillingene på maskinen gjør at prosessen går av seg selv. Prosessen består av en "Hold stage" en "PCR stage" som inneholder 40 sykluser, og avslutningsvis er det en "Melt curve stage". Når maskinen er ferdig kan hente ut resultatene av prøvene i alle brønnene. Resultatene kommer i form av CT.
+Når platen er ferdig skal den først dekkes med past og sentrifugferes før den skal inn i qPCR-maskinen. Innstillingene på maskinen gjør at prosessen går av seg selv. Prosessen består av en "Hold stage" en "PCR stage" som inneholder 40 sykluser, og avslutningsvis er det en "Melt curve stage". Når maskinen er ferdig kan hente ut resultatene av prøvene i alle brønnene. Resultatene kommer i form av CT.
 
 \newpage
 
 # Resultat
-
-
 
 ```{r}
 #| echo: false
@@ -65,7 +63,6 @@ mhc_no_NA <- na.omit(mhc)
 
 ```
 
-
 ```{r}
 #| echo: false
 #| warning: false
@@ -76,8 +73,6 @@ gt(mhc)%>%
 tab_header (title = "Tabell 1: Endring i muskeltype sammensetning W0 og W2")%>%
         tab_footnote (footnote = "Tallene er i prosent")
 ```
-
-
 
 ```{r}
 #| echo: false
@@ -94,7 +89,6 @@ tab_header (title = "Tabell 2: Vurdering av CV verdi")%>%
 ```
 
 ### Effektivitet av Fortynningsserie 1/10 -- 1/100 -- 1/1000
-
 
 ```{r}
 #| echo: false
@@ -156,8 +150,6 @@ plot(observed_values_2, true_values_2, main="Effektivitet av pcr reaksjon 2", xl
 abline(lm( true_values_2 ~ observed_values_2), col="red")
 ```
 
-
-
 ```{r}
 #| echo: false
 #| warning: false
@@ -167,8 +159,6 @@ tab_header (title = "Tabell 3: Tall fra reaksjon 1")%>%
         tab_footnote (footnote = "")
 
 ```
-
-
 
 ```{r}
 #| echo: false
@@ -180,8 +170,6 @@ tab_header (title = "Tabell 4: Tall fra reaksjon 2")%>%
 ```
 
 Anbefalt primer effektivitet er mellom 93 % og 105 % (Kuang 2018). Dette viser at på tabell 2 er det en feil i fortynningsrekken. Muligens pipeteringsfeil da elab journal viste usikkerhet rundt hva som var pipettert i ett av kamrene.
-
-
 
 # Diskusjon
 
