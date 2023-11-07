@@ -42,6 +42,9 @@ I forkant av forsøket hadde labansvarlig forberedt cDNA. qPCR-analyse ble gjort
 
 # Resultat
 
+Vi ser at mengden genuttrykk for de ulike muskelfibertypene har endret seg fra uke 0 til uke 2 @tbl-prosent. Genuttrykket for Muskelfibertype 1 (MCH1) har sunket fra 35-27%, muskelfibertype 2a (MHC2a) har økt fra 0,6-72% og muskelfibertype 2x (MHX2x) har sunket fra 63-4%. 
+
+
 ```{r}
 #| echo: false
 #| warning: false
@@ -56,28 +59,36 @@ drop_na("...18")
   
 ```
 
+
+
+
 ```{r}
 #| echo: false
 #| warning: false
-#| tbl-cap: Tabell 1 viser at mengden av de ulike muskelfibertypene har endret seg fra uke 0 til uke 2. Muskelfibertype 1 (MCH1) har sunket fra 35-27%, muskelfibertype 2a (MHC2a) har økt fra 0,6-72% og muskelfibertype 2x (MHX2x) har sunket fra 63-4%. 
+#| label: "tbl-prosent"
+#| tbl-cap: "Prosentvis fordeling av genuttrykk etter uke 0 og uke 2"
+
 
 gt(mhc)%>%
     
-tab_header (title = "Tabell 1: Endring i muskeltype sammensetning Uke 0 og Uke 2")%>%
   cols_label(...18 = "Fibertype", 
              ...19 = "Uke 0",
              ...20 = "Uke 2") %>%
-  fmt_number(columns = ...19:...20, decimals = 2) %>% 
-  tab_footnote (footnote = "Tallene er i prosent")
+  fmt_number(columns = ...19:...20, decimals = 2)
+
   
 
 
 ```
 
+Antall sykluser for å nå syklisk terksel (CT) har endret seg fra uke 0 til uke 2 @tbl-ct. Antall sykluser har sunket for MCH1 fra 22-17 sykluser. For MHC2a har antall sykluser sunket 27-15 sykluser, og for MCH2x har antall sykluser til CT økt fra 21-23 sykluser. Lavere antall sykluser viser til større genuttrykk.
+
 ```{r}
 #| echo: false
 #| warning: false
-#| tbl-cap: Tabell 2 viser at antall sykluser for å nå syklisk terksel (CT) har endret seg fra uke 0 til uke 2. Antall sykluser har sunket for muskelfibertype 1 (MCH1) fra 22-17 sykluser. For muskelfibertype 2a (MHC2a) har antall sykluser sunket 27-15 sykluser, og for muskelfibertype 2x (MCH2x) har antall sykluser til CT økt fra 21-23 sykluser. 
+#| label: "tbl-ct"
+#| tbl-cap: "CT-verdier"
+
 
 ct = read_excel("mhc1.xlsx")%>%
     select(27,28,29) %>% 
@@ -90,93 +101,10 @@ ct = read_excel("mhc1.xlsx")%>%
              ...28 = "Uke 0",
              ...29 = "Uke 2") %>%
   fmt_number(columns = ...28:...29, decimals = 2) %>% 
-tab_header (title = "Tabell 2: Vurdering av CT verdi")%>%
       tab_footnote (footnote = "Tallene er antall sykluser før syklisk terskel er nådd")
 
 ```
 
-### Effektivitet av Fortynningsserie 1/10 -- 1/100 -- 1/1000
-
-```{r}
-#| echo: false
-#| warning: false
-
-poolsample1 = read_excel("poolsample1.xlsx")%>%
-  
-  
-
-  select(1, `Avg CT`, `Log (sample quan)`, 8, 9 ) %>%
-  rename("Fortynningsserie" = 1,
-                "Snitt CT" = `Avg CT`, 
-                  "Log" = `Log (sample quan)`)
-  
-
-
-poolsample2 = read_excel("poolsample2.xlsx") %>%
-  select(1, `Avg CT`, `Log (sample quan)`, 8,9) %>%
-  rename("Fortynningsserie" = 1,
-                "Snitt CT" = `Avg CT`, 
-                  "Log" = `Log (sample quan)`)
-
-
-
-```
-
-```{r}
-#| echo: false
-#| warning: false
-
-# Data fra pool sample 1 (replace with your actual data)
-observed_values_1 <- c(0, -1, -2)
-true_values_1 <- c(27.5, 30.1, 34.5)
-
-# Create a scatter plot
-plot(observed_values_1,true_values_1, main="Effektivitet av pcr reaksjon 1", xlab="Fortynningsserie 1/10 – 1/100 – 1/1000" , ylab="Snitt CT")
-
-# Add a line of best fit
-abline(lm(true_values_1 ~ observed_values_1  ), col="red")
-
-
-
-
-# Optionally, add more formatting or annotations to the plot
-```
-
-```{r}
-#| echo: false
-#| warning: false
-
-observed_values_2 <- c(0, -1, -2)
-true_values_2 <- c(28.7, 30.6, 29.4)
-
-
-# Create a scatter plot
-plot(observed_values_2, true_values_2, main="Effektivitet av pcr reaksjon 2", xlab="Fortynningsserie 1/10 – 1/100 – 1/1000" , ylab="Snitt CT") 
-
-# Add a line of best fit
-abline(lm( true_values_2 ~ observed_values_2), col="red")
-```
-
-```{r}
-#| echo: false
-#| warning: false
-
-gt(poolsample1)%>%
-tab_header (title = "Tabell 3: Tall fra reaksjon Uke 0")%>%
-        tab_footnote (footnote = "")
-
-```
-
-```{r}
-#| echo: false
-#| warning: false
-
-gt(poolsample2) %>%
-tab_header (title = "Tabell 4: Tall fra reaksjon Uke 2")%>%
-        tab_footnote (footnote = "")
-```
-
-Anbefalt primer effektivitet er mellom 93 % og 105 % (Kuang 2018). Dette viser at på tabell 2 er det en feil i fortynningsrekken. Muligens pipeteringsfeil da elab journal viste usikkerhet rundt hva som var pipettert i ett av kamrene.
 
 # Diskusjon
 
