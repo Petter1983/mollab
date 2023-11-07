@@ -59,6 +59,7 @@ drop_na("...18")
 ```{r}
 #| echo: false
 #| warning: false
+#| tbl-cap: Tabell 1 viser at mengden av de ulike muskelfibertypene har endret seg fra uke 0 til uke 2. Muskelfibertype 1 (MCH1) har sunket fra 35-27%, muskelfibertype 2a (MHC2a) har økt fra 0,6-72% og muskelfibertype 2x (MHX2x) har sunket fra 63-4%. 
 
 gt(mhc)%>%
     
@@ -76,6 +77,7 @@ tab_header (title = "Tabell 1: Endring i muskeltype sammensetning Uke 0 og Uke 2
 ```{r}
 #| echo: false
 #| warning: false
+#| tbl-cap: Tabell 2 viser at antall sykluser for å nå syklisk terksel (CT) har endret seg fra uke 0 til uke 2. Antall sykluser har sunket for muskelfibertype 1 (MCH1) fra 22-17 sykluser. For muskelfibertype 2a (MHC2a) har antall sykluser sunket 27-15 sykluser, og for muskelfibertype 2x (MCH2x) har antall sykluser til CT økt fra 21-23 sykluser. 
 
 ct = read_excel("mhc1.xlsx")%>%
     select(27,28,29) %>% 

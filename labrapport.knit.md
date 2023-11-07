@@ -1,101 +1,37 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>Labrapport</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
-
-
-<script src="labrapport_files/libs/clipboard/clipboard.min.js"></script>
-<script src="labrapport_files/libs/quarto-html/quarto.js"></script>
-<script src="labrapport_files/libs/quarto-html/popper.min.js"></script>
-<script src="labrapport_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="labrapport_files/libs/quarto-html/anchor.min.js"></script>
-<link href="labrapport_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="labrapport_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="labrapport_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="labrapport_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="labrapport_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-</head>
-
-<body class="fullcontent">
-
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Labrapport</h1>
-</div>
+---
+title: "Labrapport"
+format: html
+bibliography: molekylærlab.bib
+csl: apa.csl
+editor_options: 
+  chunk_output_type: console
+---
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
+# Introduksjon
 
-</header>
+Analyser av genuttrykk gjennom fluorisens-basert sanntids kvantitativ polymerase kjedereaksjon (qPCR) er fast praksis i mange medisinske treningsstudier [@kuangOverviewTechnicalConsiderations2018]. qPCR benyttes til å måle uttrykket av et målgen i prøver fra blant annet blod og muskelvev. Et vanlig bruksområde innenfor treningsfysiologi er for eksempel å måle treningsinduserte endringer i genutrykk for ulike muskelfibertyper. Selv om denne typen analyse er svært utbredt, finnes det mange ulike protokoller og måter å gjennomføre analysen på. Reproduserbarheten og reliabiliteten til dataen avhenger i stor grad av hvordan eksperimentene gjennomføres og tolkes. For å sikre så reliable tester som mulig, er det viktig med en detaljert og nøye protokoll [@kuangOverviewTechnicalConsiderations2018].
 
-<section id="introduksjon" class="level1">
-<h1>Introduksjon</h1>
-<p>Analyser av genuttrykk gjennom fluorisens-basert sanntids kvantitativ polymerase kjedereaksjon (qPCR) er fast praksis i mange medisinske treningsstudier <span class="citation" data-cites="kuangOverviewTechnicalConsiderations2018">(<a href="#ref-kuangOverviewTechnicalConsiderations2018" role="doc-biblioref">Kuang et al., 2018</a>)</span>. qPCR benyttes til å måle uttrykket av et målgen i prøver fra blant annet blod og muskelvev. Et vanlig bruksområde innenfor treningsfysiologi er for eksempel å måle treningsinduserte endringer i genutrykk for ulike muskelfibertyper. Selv om denne typen analyse er svært utbredt, finnes det mange ulike protokoller og måter å gjennomføre analysen på. Reproduserbarheten og reliabiliteten til dataen avhenger i stor grad av hvordan eksperimentene gjennomføres og tolkes. For å sikre så reliable tester som mulig, er det viktig med en detaljert og nøye protokoll <span class="citation" data-cites="kuangOverviewTechnicalConsiderations2018">(<a href="#ref-kuangOverviewTechnicalConsiderations2018" role="doc-biblioref">Kuang et al., 2018</a>)</span>.</p>
-<p>Prinsippet bak en qPCR-analyse er å følge PCR i sanntid. For å gjennomføre PCR må vi først ekstrahere RNA fra en biologisk celleprøve. Deretter blir RNAet gjort om til cDNA i en prosesses kalt reversert transkripsjon. Med PCR blir dette cDNAet deretter amplifisert opp til milliarder av kopier <span class="citation" data-cites="kuangOverviewTechnicalConsiderations2018">(<a href="#ref-kuangOverviewTechnicalConsiderations2018" role="doc-biblioref">Kuang et al., 2018</a>)</span>. Hver syklus i en PCR er består av tre steg for å kopiere opp det aktuelle DNAet. I første steg (denaturering) blir DNAet utsatt for høy temperatur for å dele DNAet fra dobbeltrådet til enkelttrådet. I det andre steget (annealing) blir temperaturen senket og primere fester seg til templat-trådene. I det siste steget (elongering) øker temperaturen igjen og DNA-polymeraser fester seg til primerne og syntetiserer et nytt dobbelttrådet DNA, likt det vi startet med <span class="citation" data-cites="kuangOverviewTechnicalConsiderations2018">(<a href="#ref-kuangOverviewTechnicalConsiderations2018" role="doc-biblioref">Kuang et al., 2018</a>)</span>. Deretter vil denne syklusen repetere seg, slik at DNAet dobles ekspontensielt for hver syklus. I en qPCR som benytter SYBR green-metoden blir det aktuelle DNAet bundet til fluorosens under hver syklus slik at man kan følge PCR-prosessen i sanntid, ved å ta et bilde som detekterer fluorescensen etter hver syklus <span class="citation" data-cites="kuangOverviewTechnicalConsiderations2018">(<a href="#ref-kuangOverviewTechnicalConsiderations2018" role="doc-biblioref">Kuang et al., 2018</a>)</span>. Mengden cDNA og fluorescens dobles etter hver syklus, og signalet av fluorescens øker dermed eksponentielt. Hvor raskt signalet av fluorescens når en satt grense kalt syklisk terskel (CT), bedømmer hvor sort uttrykk av et gen vi har. Jo færre sykluser som må gjennomføres for å nå CT, jo større uttrykk av målgenet hadde vi i celleprøven vår <span class="citation" data-cites="livakAnalysisRelativeGene2001a">(<a href="#ref-livakAnalysisRelativeGene2001a" role="doc-biblioref">Livak &amp; Schmittgen, 2001</a>)</span>.</p>
-</section>
-<section id="metode" class="level1">
-<h1>Metode</h1>
-<p>I forkant av forsøket hadde labansvarlig forberedt cDNA. qPCR-analyse ble gjort ved bruk av cDNA og en Master mix. Master mixen besto av 5μl Cybr-green, 1μl primer mix (MCH1, MHC2a, MCH2x eller MCHb2m) og 2μl H<sub>2</sub>O. På en plate med brønner ble det tilført 8μl Master mix i brønnene sammen med 2μl cDNA. I tillegg til dette lagde vi en fortynningsserie for å teste primerne. Fortynningene vi brukte var 1/1, 1/10, 1/100, 1/1000, 1/10000, 1/100000 og 1/1000000. I 1/1 prøven var det 2μl cDNA og 8μl cmyc. Fortynningsserien tok utgangspunkt i denne prøven og ble fortynnet med H<sub>2</sub>O. Platen ble så dekket med plast og sentrifiugert på 1200rpm i 1 minutt. PCR-prøvene ble analysert ved sanntids PCR (Applied Biosystems 7500 fast Real-TimePCR Systems, Life Technologies AS) og ved bruk av Quant Studio programvare (Applied Biosystems, Waltham, MA USA). PCR-prosessen besto av tre deler, en “Hold stage” en “PCR stage” og en “Melt curve stage”. Det første steget gikk ut på at temperaturen økte med 1,99<strong>°</strong>C/s opp til 50<strong>°</strong>C hvor temperaturen forble konstant i 2 min. Videre Økte temperaturen med 1,99<strong>°</strong>C/s opp til 95<strong>°</strong>C hvor temperaturen forble konstant i 2 min. Deretter startet selve PCR-prosessen som besto av 40 sykluser. Én syklus besto av 1 sek på 95<strong>°</strong>C før temperaturen sank med 1,77<strong>°</strong>C/s ned til 60<strong>°</strong>C hvor temperaturen ble holdt konstant i 30 sek. Etter hver syklus ble det tatt bilde av brønnenes fluorescens. Avslutningsvis økte temperaturen med 1,99<strong>°</strong>C/s opp til 95<strong>°</strong>C hvor temperaturen holdes konstant i 15 sek. Deretter synker temperaturen med 1,77<strong>°</strong>C/s ned til 60<strong>°</strong>C hvor temperaturen holdes konstant i 1 min. Temperaturen økte deretter med 0,15<strong>°</strong>C/s opp til 95<strong>°</strong>C hvor temperaturen ble holdt konstant i 15 sek. Etter PCR-prosessen var ferdig kunne vi hente ut resultatene i form av CT-verdier.</p>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="resultat" class="level1">
-<h1>Resultat</h1>
-<div class="cell">
-<div class="cell-output-display">
+Prinsippet bak en qPCR-analyse er å følge PCR i sanntid. For å gjennomføre PCR må vi først ekstrahere RNA fra en biologisk celleprøve. Deretter blir RNAet gjort om til cDNA i en prosesses kalt reversert transkripsjon. Med PCR blir dette cDNAet deretter amplifisert opp til milliarder av kopier [@kuangOverviewTechnicalConsiderations2018]. Hver syklus i en PCR er består av tre steg for å kopiere opp det aktuelle DNAet. I første steg (denaturering) blir DNAet utsatt for høy temperatur for å dele DNAet fra dobbeltrådet til enkelttrådet. I det andre steget (annealing) blir temperaturen senket og primere fester seg til templat-trådene. I det siste steget (elongering) øker temperaturen igjen og DNA-polymeraser fester seg til primerne og syntetiserer et nytt dobbelttrådet DNA, likt det vi startet med [@kuangOverviewTechnicalConsiderations2018]. Deretter vil denne syklusen repetere seg, slik at DNAet dobles ekspontensielt for hver syklus. I en qPCR som benytter SYBR green-metoden blir det aktuelle DNAet bundet til fluorosens under hver syklus slik at man kan følge PCR-prosessen i sanntid, ved å ta et bilde som detekterer fluorescensen etter hver syklus [@kuangOverviewTechnicalConsiderations2018]. Mengden cDNA og fluorescens dobles etter hver syklus, og signalet av fluorescens øker dermed eksponentielt. Hvor raskt signalet av fluorescens når en satt grense kalt syklisk terskel (CT), bedømmer hvor sort uttrykk av et gen vi har. Jo færre sykluser som må gjennomføres for å nå CT, jo større uttrykk av målgenet hadde vi i celleprøven vår [@livakAnalysisRelativeGene2001a].
 
+# Metode
+
+I forkant av forsøket hadde labansvarlig forberedt cDNA. qPCR-analyse ble gjort ved bruk av cDNA og en Master mix. Master mixen besto av 5μl Cybr-green, 1μl primer mix (MCH1, MHC2a, MCH2x eller MCHb2m) og 2μl H~2~O. På en plate med brønner ble det tilført 8μl Master mix i brønnene sammen med 2μl cDNA. I tillegg til dette lagde vi en fortynningsserie for å teste primerne. Fortynningene vi brukte var 1/1, 1/10, 1/100, 1/1000, 1/10000, 1/100000 og 1/1000000. I 1/1 prøven var det 2μl cDNA og 8μl cmyc. Fortynningsserien tok utgangspunkt i denne prøven og ble fortynnet med H~2~O. Platen ble så dekket med plast og sentrifiugert på 1200rpm i 1 minutt. PCR-prøvene ble analysert ved sanntids PCR (Applied Biosystems 7500 fast Real-TimePCR Systems, Life Technologies AS) og ved bruk av Quant Studio programvare (Applied Biosystems, Waltham, MA USA). PCR-prosessen besto av tre deler, en "Hold stage" en "PCR stage" og en "Melt curve stage". Det første steget gikk ut på at temperaturen økte med 1,99**°**C/s opp til 50**°**C hvor temperaturen forble konstant i 2 min. Videre Økte temperaturen med 1,99**°**C/s opp til 95**°**C hvor temperaturen forble konstant i 2 min. Deretter startet selve PCR-prosessen som besto av 40 sykluser. Én syklus besto av 1 sek på 95**°**C før temperaturen sank med 1,77**°**C/s ned til 60**°**C hvor temperaturen ble holdt konstant i 30 sek. Etter hver syklus ble det tatt bilde av brønnenes fluorescens. Avslutningsvis økte temperaturen med 1,99**°**C/s opp til 95**°**C hvor temperaturen holdes konstant i 15 sek. Deretter synker temperaturen med 1,77**°**C/s ned til 60**°**C hvor temperaturen holdes konstant i 1 min. Temperaturen økte deretter med 0,15**°**C/s opp til 95**°**C hvor temperaturen ble holdt konstant i 15 sek. Etter PCR-prosessen var ferdig kunne vi hente ut resultatene i form av CT-verdier.
+
+\newpage
+
+# Resultat
+
+
+::: {.cell}
+
+:::
+
+::: {.cell tbl-cap='Tabell 1 viser at mengden av de ulike muskelfibertypene har endret seg fra uke 0 til uke 2. Muskelfibertype 1 (MCH1) har sunket fra 35-27%, muskelfibertype 2a (MHC2a) har økt fra 0,6-72% og muskelfibertype 2x (MHX2x) har sunket fra 63-4%.'}
+::: {.cell-output-display}
+```{=html}
 <div id="xmuawuppsx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#xmuawuppsx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -536,13 +472,10 @@ div.csl-indent {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption><p>Tabell 1 viser at mengden av de ulike muskelfibertypene har endret
-seg fra uke 0 til uke 2. Muskelfibertype 1 (MCH1) har sunket fra 35-27%,
-muskelfibertype 2a (MHC2a) har økt fra 0,6-72% og muskelfibertype 2x
-(MHX2x) har sunket fra 63-4%.</p></caption>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   <thead>
     <tr class="gt_heading">
-      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Tabell 1: Endring i muskeltype sammensetning Uke 0 og Uke 2</td>
+      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style>Tabell 1: Endring i muskeltype sammensetning Uke 0 og Uke 2</td>
     </tr>
     
     <tr class="gt_col_headings">
@@ -570,11 +503,13 @@ muskelfibertype 2a (MHC2a) har økt fra 0,6-72% og muskelfibertype 2x
   </tfoot>
 </table>
 </div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
+```
+:::
+:::
 
+::: {.cell tbl-cap='Tabell 2 viser at antall sykluser for å nå syklisk terksel (CT) har endret seg fra uke 0 til uke 2. Antall sykluser har sunket for muskelfibertype 1 (MCH1) fra 22-17 sykluser. For muskelfibertype 2a (MHC2a) har antall sykluser sunket 27-15 sykluser, og for muskelfibertype 2x (MCH2x) har antall sykluser til CT økt fra 21-23 sykluser.'}
+::: {.cell-output-display}
+```{=html}
 <div id="mgtflsjlwq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#mgtflsjlwq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -1015,15 +950,10 @@ muskelfibertype 2a (MHC2a) har økt fra 0,6-72% og muskelfibertype 2x
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption><p>Tabell 2 viser at antall sykluser for å nå syklisk terksel (CT) har
-endret seg fra uke 0 til uke 2. Antall sykluser har sunket for
-muskelfibertype 1 (MCH1) fra 22-17 sykluser. For muskelfibertype 2a
-(MHC2a) har antall sykluser sunket 27-15 sykluser, og for
-muskelfibertype 2x (MCH2x) har antall sykluser til CT økt fra 21-23
-sykluser.</p></caption>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   <thead>
     <tr class="gt_heading">
-      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Tabell 2: Vurdering av CT verdi</td>
+      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style>Tabell 2: Vurdering av CT verdi</td>
     </tr>
     
     <tr class="gt_col_headings">
@@ -1051,23 +981,33 @@ sykluser.</p></caption>
   </tfoot>
 </table>
 </div>
-</div>
-</div>
-<section id="effektivitet-av-fortynningsserie-110-1100-11000" class="level3">
-<h3 class="anchored" data-anchor-id="effektivitet-av-fortynningsserie-110-1100-11000">Effektivitet av Fortynningsserie 1/10 – 1/100 – 1/1000</h3>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="labrapport_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="labrapport_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
+```
+:::
+:::
 
+
+### Effektivitet av Fortynningsserie 1/10 -- 1/100 -- 1/1000
+
+
+::: {.cell}
+
+:::
+
+::: {.cell}
+::: {.cell-output-display}
+![](labrapport_files/figure-html/unnamed-chunk-6-1.png){width=672}
+:::
+:::
+
+::: {.cell}
+::: {.cell-output-display}
+![](labrapport_files/figure-html/unnamed-chunk-7-1.png){width=672}
+:::
+:::
+
+::: {.cell}
+::: {.cell-output-display}
+```{=html}
 <div id="wolycjbqrq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#wolycjbqrq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -1511,7 +1451,7 @@ sykluser.</p></caption>
 <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   <thead>
     <tr class="gt_heading">
-      <td colspan="5" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Tabell 3: Tall fra reaksjon Uke 0</td>
+      <td colspan="5" class="gt_heading gt_title gt_font_normal gt_bottom_border" style>Tabell 3: Tall fra reaksjon Uke 0</td>
     </tr>
     
     <tr class="gt_col_headings">
@@ -1562,11 +1502,13 @@ sykluser.</p></caption>
   </tfoot>
 </table>
 </div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
+```
+:::
+:::
 
+::: {.cell}
+::: {.cell-output-display}
+```{=html}
 <div id="rhqrypepst" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#rhqrypepst table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -2010,7 +1952,7 @@ sykluser.</p></caption>
 <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   <thead>
     <tr class="gt_heading">
-      <td colspan="5" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Tabell 4: Tall fra reaksjon Uke 2</td>
+      <td colspan="5" class="gt_heading gt_title gt_font_normal gt_bottom_border" style>Tabell 4: Tall fra reaksjon Uke 2</td>
     </tr>
     
     <tr class="gt_col_headings">
@@ -2061,267 +2003,18 @@ sykluser.</p></caption>
   </tfoot>
 </table>
 </div>
-</div>
-</div>
-<p>Anbefalt primer effektivitet er mellom 93 % og 105 % (Kuang 2018). Dette viser at på tabell 2 er det en feil i fortynningsrekken. Muligens pipeteringsfeil da elab journal viste usikkerhet rundt hva som var pipettert i ett av kamrene.</p>
-</section>
-</section>
-<section id="diskusjon" class="level1">
-<h1>Diskusjon</h1>
-</section>
-<section id="konklusjon" class="level1">
-<h1>Konklusjon</h1>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="referanser" class="level1 unnumbered">
+```
+:::
+:::
 
 
-</section>
+Anbefalt primer effektivitet er mellom 93 % og 105 % (Kuang 2018). Dette viser at på tabell 2 er det en feil i fortynningsrekken. Muligens pipeteringsfeil da elab journal viste usikkerhet rundt hva som var pipettert i ett av kamrene.
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Referanser</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
-<div id="ref-kuangOverviewTechnicalConsiderations2018" class="csl-entry" role="listitem">
-Kuang, J., Yan, X., Genders, A. J., Granata, C., &amp; Bishop, D. J. (2018). An overview of technical considerations when using quantitative real-time <span>PCR</span> analysis of gene expression in human exercise research. <em>PLOS ONE</em>, <em>13</em>(5), e0196438. <a href="https://doi.org/10.1371/journal.pone.0196438">https://doi.org/10.1371/journal.pone.0196438</a>
-</div>
-<div id="ref-livakAnalysisRelativeGene2001a" class="csl-entry" role="listitem">
-Livak, K. J., &amp; Schmittgen, T. D. (2001). Analysis of <span>Relative Gene Expression Data Using Real-Time Quantitative PCR</span> and the 2-<span><span class="math inline">\(\Delta\Delta\)</span>CT Method</span>. <em>Methods</em>, <em>25</em>(4), 402–408. <a href="https://doi.org/10.1006/meth.2001.1262">https://doi.org/10.1006/meth.2001.1262</a>
-</div>
-</div></section></div></main>
-<!-- /main column -->
-<script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-  function tippyHover(el, contentFn) {
-    const config = {
-      allowHTML: true,
-      content: contentFn,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start'
-    };
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      return note.innerHTML;
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
-      });
-    }
-  }
-});
-</script>
-</div> <!-- /content -->
+# Diskusjon
 
+# Konklusjon
 
+\newpage
 
-</body></html>
+# Referanser
+
