@@ -89,7 +89,7 @@ ct = read_excel("mhc1.xlsx")%>%
              ...29 = "Uke 2") %>%
   fmt_number(columns = ...28:...29, decimals = 2) %>% 
 tab_header (title = "Tabell 2: Vurdering av CT verdi")%>%
-        tab_footnote (footnote = "27 er muskelfibertype. 28 er Uke 0. 29 er Uke 2. Tallene er vist som CV%. CV på 0-5 prosent er gode tall, mens verdi over 10 prosent er avvikstall")
+        tab_footnote (footnote = "27 er muskelfibertype. 28 er Uke 0. 29 er Uke 2. Tallene er vist som CV%. CV på 0-5 prosent er gode tall, mens verdi over 10 prosent er avvikstall.")
 
 ```
 
