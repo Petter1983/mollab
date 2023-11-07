@@ -48,7 +48,9 @@ I forkant av forsøket hadde labansvarlig forberedt cDNA. qPCR-analyse ble gjort
 
 
 mhc = read_excel("mhc1.xlsx")%>%
-    select(18,19,20)
+    select(18,19,20) %>% 
+drop_na("...18")
+
 
   
   
@@ -60,8 +62,14 @@ mhc = read_excel("mhc1.xlsx")%>%
 
 gt(mhc)%>%
     
-tab_header (title = "Tabell 1: Endring i muskeltype sammensetning W0 og W2")%>%
-        tab_footnote (footnote = "Tallene er i prosent")
+tab_header (title = "Tabell 1: Endring i muskeltype sammensetning Uke 0 og Uke 2")%>%
+  cols_label(...18 = "Fibertype", 
+             ...19 = "Uke 0",
+             ...20 = "Uke 2") %>%
+  fmt_number(columns = ...19:...20, decimals = 2) %>% 
+  tab_footnote (footnote = "Tallene er i prosent")
+  
+
 
 ```
 
@@ -70,10 +78,16 @@ tab_header (title = "Tabell 1: Endring i muskeltype sammensetning W0 og W2")%>%
 #| warning: false
 
 ct = read_excel("mhc1.xlsx")%>%
-    select(27,28,29)
+    select(27,28,29) %>% 
+  drop_na("...27")
+  
 
  
   gt(ct)%>%
+    cols_label(...27 = "Fibertype", 
+             ...28 = "Uke 0",
+             ...29 = "Uke 2") %>%
+  fmt_number(columns = ...28:...29, decimals = 2) %>% 
 tab_header (title = "Tabell 2: Vurdering av CT verdi")%>%
         tab_footnote (footnote = "27 er muskelfibertype. 28 er Uke 0. 29 er Uke 2. Tallene er vist som CV%. CV på 0-5 prosent er gode tall, mens verdi over 10 prosent er avvikstall")
 
