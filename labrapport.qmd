@@ -112,7 +112,7 @@ Bruken av stabile og egnede gener ved analyse av genuttrykk gjennom fluorisens-b
 
 I denne oppgaven har vi valgt å se på endringen i mengden genuttrykk som de ulike muskelfibertypene har endret seg fra uke 0 til uke 2. 
 
-Vurderingen og tolkningen av tallene for endring i genuttrykket for de ulike muskelfibertypene virker å være fornuftige. Som f.eks. at styrketrening gir en endring ved en økt prosentandel muskelfibertype2a som tabell 1 i @terzisResistanceExerciseinducedIncrease2007 også viser. Tabell 1 viser at styrketrening gir endringer som at muskelfibertype 1 (MCH1) har sunket fra 35-27%, muskelfibertype 2a (MHC2a) har økt fra 0,6-72% og muskelfibertype 2x (MHX2x) har sunket fra 63-4%.
+Vurderingen og tolkningen av tallene for endring i genuttrykket for de ulike muskelfibertypene virker å være fornuftige. Som f.eks. at styrketrening gir en endring ved en økt prosentandel muskelfibertype2a som tabell 1 i @terzisResistanceExerciseinducedIncrease2007 også viser. @andersenMyosinHeavyChain2000 viser også at styrketrening reduserer MHX2x og øker MHX2a.  Tabell 1 viser at styrketrening gir endringer som at muskelfibertype 1 (MCH1) har sunket fra 35-27%, muskelfibertype 2a (MHC2a) har økt fra 0,6-72% og muskelfibertype 2x (MHX2x) har sunket fra 63-4%.
 Endringen på muskelfibertype 2a og 2x er stor. Dette kan være at dette var gen fra en veldig utrent person, men det kan også være en feil i eksperimentet.  
 
 Vi har også sett på antall sykluser som trengs for å nå terskel for eksponensiell økning i fluorisense. Lavere antall sykluser viser til større genuttrykk.
