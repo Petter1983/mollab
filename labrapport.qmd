@@ -42,8 +42,7 @@ I forkant av forsøket hadde labansvarlig forberedt cDNA. qPCR-analyse ble gjort
 
 # Resultat
 
-Vi ser at mengden genuttrykk for de ulike muskelfibertypene har endret seg fra uke 0 til uke 2 @tbl-prosent. Genuttrykket for Muskelfibertype 1 (MCH1) har sunket fra 35-27%, muskelfibertype 2a (MHC2a) har økt fra 0,6-72% og muskelfibertype 2x (MHX2x) har sunket fra 63-4%. 
-
+Vi ser at mengden genuttrykk for de ulike muskelfibertypene har endret seg fra uke 0 til uke 2 @tbl-prosent. Genuttrykket for Muskelfibertype 1 (MCH1) har sunket fra 35-27%, muskelfibertype 2a (MHC2a) har økt fra 0,6-72% og muskelfibertype 2x (MHX2x) har sunket fra 63-4%.
 
 ```{r}
 #| echo: false
@@ -58,9 +57,6 @@ drop_na("...18")
   
   
 ```
-
-
-
 
 ```{r}
 #| echo: false
@@ -105,26 +101,19 @@ ct = read_excel("mhc1.xlsx")%>%
 
 ```
 
-
 # Diskusjon
 
-Bruken av stabile og egnede gener ved analyse av genuttrykk gjennom fluorisens-basert sanntids kvantitativ polymerase kjedereaksjon (qPCR) krever stabile og egnede gener. I tillegg kreves at protokollen som vi brukte følges nøye. Dersom disse faktorene er på plass kan vi korrekt vurdere, presentere og tolke genuttrykk. 
+Bruken av stabile og egnede gener ved analyse av genuttrykk gjennom fluorisens-basert sanntids kvantitativ polymerase kjedereaksjon (qPCR) krever stabile og egnede gener. I tillegg kreves at protokollen som vi brukte følges nøye. Dersom disse faktorene er på plass kan vi korrekt vurdere, presentere og tolke genuttrykk.
 
-I denne oppgaven har vi valgt å se på endringen i mengden genuttrykk som de ulike muskelfibertypene har endret seg fra uke 0 til uke 2. 
+I denne oppgaven har vi valgt å se på endringen i mengden genuttrykk som de ulike muskelfibertypene har endret seg fra uke 0 til uke 2.
 
-Vurderingen og tolkningen av tallene for endring i genuttrykket for de ulike muskelfibertypene virker å være fornuftige. Som f.eks. at styrketrening gir en endring ved en økt prosentandel muskelfibertype2a som tabell 1 i @terzisResistanceExerciseinducedIncrease2007 også viser. @andersenMyosinHeavyChain2000 viser også at styrketrening reduserer MHX2x og øker MHX2a.  Tabell 1 viser at styrketrening gir endringer som at muskelfibertype 1 (MCH1) har sunket fra 35-27%, muskelfibertype 2a (MHC2a) har økt fra 0,6-72% og muskelfibertype 2x (MHX2x) har sunket fra 63-4%.
-Endringen på muskelfibertype 2a og 2x er stor. Dette kan være at dette var gen fra en veldig utrent person, men det kan også være en feil i eksperimentet.  
+Vurderingen og tolkningen av tallene for endring i genuttrykket for de ulike muskelfibertypene virker å være fornuftige. Som f.eks. at styrketrening gir en endring ved en økt prosentandel muskelfibertype2a som tabell 1 i [@terzis2007] også viser. [@andersen2000] viser også at styrketrening reduserer MHX2x og øker MHX2a. Tabell 1 viser at styrketrening gir endringer som at muskelfibertype 1 (MCH1) har sunket fra 35-27%, muskelfibertype 2a (MHC2a) har økt fra 0,6-72% og muskelfibertype 2x (MHX2x) har sunket fra 63-4%. Endringen på muskelfibertype 2a og 2x er stor. Dette kan være at dette var gen fra en veldig utrent person, men det kan også være en feil i eksperimentet.
 
-Vi har også sett på antall sykluser som trengs for å nå terskel for eksponensiell økning i fluorisense. Lavere antall sykluser viser til større genuttrykk.
-Genutrykket for MCH2x var eneste genutrykk som trengte flere sykluser for å nå CT-verdi på uke 2. Dette kan være en feil i eksperimentet. 
-Ellers ser vi at antall sykluser har sunket for både MCH1 og MHC2a. 
-
-
- 
+Vi har også sett på antall sykluser som trengs for å nå terskel for eksponensiell økning i fluorisense. Lavere antall sykluser viser til større genuttrykk. Genutrykket for MCH2x var eneste genutrykk som trengte flere sykluser for å nå CT-verdi på uke 2. Dette kan være en feil i eksperimentet. Ellers ser vi at antall sykluser har sunket for både MCH1 og MHC2a.
 
 # Konklusjon
-Styrketrening viser seg å gi endringer i fibertypesammensetning ved at muskelfibertype2a blir mer dominant sammenlignet med type 1 og type 2x.
 
+Styrketrening viser seg å gi endringer i fibertypesammensetning ved at muskelfibertype2a blir mer dominant sammenlignet med type 1 og type 2x.
 
 \newpage
 
