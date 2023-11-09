@@ -1,6 +1,6 @@
 ---
 title: "Labrapport"
-format: html
+format: pdf
 bibliography: molekylærlab.bib
 csl: apa.csl
 editor_options: 
@@ -38,7 +38,6 @@ Prinsippet bak en qPCR-analyse er å følge PCR i sanntid. For å gjennomføre P
 
 I forkant av forsøket hadde labansvarlig forberedt cDNA. qPCR-analyse ble gjort ved bruk av cDNA og en Master mix. Master mixen besto av 5μl Cybr-green, 1μl primer mix (MCH1, MHC2a, MCH2x eller MCHb2m) og 2μl H~2~O. På en plate med brønner ble det tilført 8μl Master mix i brønnene sammen med 2μl cDNA. I tillegg til dette lagde vi en fortynningsserie for å teste primerne. Fortynningene vi brukte var 1/1, 1/10, 1/100, 1/1000, 1/10000, 1/100000 og 1/1000000. I 1/1 prøven var det 2μl cDNA og 8μl cmyc. Fortynningsserien tok utgangspunkt i denne prøven og ble fortynnet med H~2~O. Platen ble så dekket med plast og sentrifiugert på 1200rpm i 1 minutt. PCR-prøvene ble analysert ved sanntids PCR (Applied Biosystems 7500 fast Real-TimePCR Systems, Life Technologies AS) og ved bruk av Quant Studio programvare (Applied Biosystems, Waltham, MA USA). PCR-prosessen besto av tre deler, en "Hold stage" en "PCR stage" og en "Melt curve stage". Det første steget gikk ut på at temperaturen økte med 1,99**°**C/s opp til 50**°**C hvor temperaturen forble konstant i 2 min. Videre Økte temperaturen med 1,99**°**C/s opp til 95**°**C hvor temperaturen forble konstant i 2 min. Deretter startet selve PCR-prosessen som besto av 40 sykluser. Én syklus besto av 1 sek på 95**°**C før temperaturen sank med 1,77**°**C/s ned til 60**°**C hvor temperaturen ble holdt konstant i 30 sek. Etter hver syklus ble det tatt bilde av brønnenes fluorescens. Avslutningsvis økte temperaturen med 1,99**°**C/s opp til 95**°**C hvor temperaturen holdes konstant i 15 sek. Deretter synker temperaturen med 1,77**°**C/s ned til 60**°**C hvor temperaturen holdes konstant i 1 min. Temperaturen økte deretter med 0,15**°**C/s opp til 95**°**C hvor temperaturen ble holdt konstant i 15 sek. Etter PCR-prosessen var ferdig kunne vi hente ut resultatene i form av CT-verdier.
 
-\newpage
 
 # Resultat
 
@@ -67,7 +66,7 @@ drop_na("...18")
 
 gt(mhc)%>%
     
-  cols_label(...18 = "Fibertype", 
+  cols_label(...18 = "Gentype", 
              ...19 = "Uke 0",
              ...20 = "Uke 2") %>%
   fmt_number(columns = ...19:...20, decimals = 2)
@@ -93,7 +92,7 @@ ct = read_excel("mhc1.xlsx")%>%
 
  
   gt(ct)%>%
-    cols_label(...27 = "Fibertype", 
+    cols_label(...27 = "Gentype", 
              ...28 = "Uke 0",
              ...29 = "Uke 2") %>%
   fmt_number(columns = ...28:...29, decimals = 2) %>% 
@@ -103,17 +102,24 @@ ct = read_excel("mhc1.xlsx")%>%
 
 # Diskusjon
 
-Bruken av stabile og egnede gener ved analyse av genuttrykk gjennom fluorisens-basert sanntids kvantitativ polymerase kjedereaksjon (qPCR) krever stabile og egnede gener. I tillegg kreves at protokollen som vi brukte følges nøye. Dersom disse faktorene er på plass kan vi korrekt vurdere, presentere og tolke genuttrykk.
+Bruken av stabile og egnede gener ved analyse av genuttrykk gjennom fluorisens-basert sanntids kvantitativ polymerase kjedereaksjon (qPCR) krever stabile og egnede gener. I tillegg kreves at protokollen som vi brukte følges nøye. Dersom disse faktorene er på plass kan vi korrekt vurdere, presentere og tolke genuttrykk. 
 
-I denne oppgaven har vi valgt å se på endringen i mengden genuttrykk som de ulike muskelfibertypene har endret seg fra uke 0 til uke 2.
 
-Vurderingen og tolkningen av tallene for endring i genuttrykket for de ulike muskelfibertypene virker å være fornuftige. Som f.eks. at styrketrening gir en endring ved en økt prosentandel muskelfibertype2a som tabell 1 i [@terzis2007] også viser. [@andersen2000] viser også at styrketrening reduserer MHX2x og øker MHX2a. Tabell 1 viser at styrketrening gir endringer som at muskelfibertype 1 (MCH1) har sunket fra 35-27%, muskelfibertype 2a (MHC2a) har økt fra 0,6-72% og muskelfibertype 2x (MHX2x) har sunket fra 63-4%. Endringen på muskelfibertype 2a og 2x er stor. Dette kan være at dette var gen fra en veldig utrent person, men det kan også være en feil i eksperimentet.
+I denne oppgaven har vi valgt å se på endringen i mengden genuttrykk på MHC1, MHC2a og MHC2x uke 0 til uke 2. 
 
-Vi har også sett på antall sykluser som trengs for å nå terskel for eksponensiell økning i fluorisense. Lavere antall sykluser viser til større genuttrykk. Genutrykket for MCH2x var eneste genutrykk som trengte flere sykluser for å nå CT-verdi på uke 2. Dette kan være en feil i eksperimentet. Ellers ser vi at antall sykluser har sunket for både MCH1 og MHC2a.
+Vurderingen og tolkningen av tallene for endring i genuttrykket for de ulike typene virker å være fornuftige. Tabell 1 i @terzisResistanceExerciseinducedIncrease2007 viser en blant annet en endring ved en økt prosentandel MHC2a etter 14 uker med styrketrening. @andersenMyosinHeavyChain2000 viser også at styrketrening reduserer MHX2x og øker MHX2a. I denne oppgaven viser tabell 1 at styrketrening gir endringer som at MCH1 har sunket fra 35-27%, MHC2a har økt fra 0,6-72% og MHX2x har sunket fra 63-4%.
+
+Endringen på MHC2a og MHC2x er stor. Dette kan være at dette var gen fra en veldig utrent person, men det kan også være en feil i eksperimentet.  I @andersenMyosinHeavyChain2000  beskrives det at ved å øke muskelaktiviteten, enten gjennom styrke- eller utholdenhetstrening, slås MHC2x-genet av noe som resulterer i en forhøyet andel MHC2a-gen på bekostning av type 2x. Ved inaktivitet reverseres denne prosessen, noe som gjør forekomsten av MHC2x mer vanlig.
+
+
+Vi har også sett på antall sykluser som trengs for å nå terskel for eksponensiell økning i fluorisense. Lavere antall sykluser viser til større genuttrykk. Genutrykket for MCH2x var eneste genutrykk som trengte flere sykluser for å nå CT-verdi på uke 2. Dette kan være en feil i eksperimentet. Ellers ser vi at antall sykluser har sunket for både MCH1 og MHC2a. 
+
+
 
 # Konklusjon
 
-Styrketrening viser seg å gi endringer i fibertypesammensetning ved at muskelfibertype2a blir mer dominant sammenlignet med type 1 og type 2x.
+Styrketrening viser seg å gi endringer som en forhøyet andel MHC2a-gen blir mer dominant sammenlignet med type 1 og type 2x.
+
 
 \newpage
 
