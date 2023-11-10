@@ -101,17 +101,17 @@ ct = read_excel("mhc1.xlsx")%>%
 
 # Diskusjon
 
-Ved bruk av fluorisens-basert sanntids kvantitativ polymerase kjedereaksjon (qPCR) er et essensielt med både egnede gener og en detaljert protokoll. Målet med undersøkelsen var å kunne vurdere, presentere å tolke genuttrykk. I denne oppgaven valgte vi å på endringen i mengden genuttrykk av MHC1, MHC2a og MHC2x før trening og etter 2 uker med styrketrening.
+Ved bruk av fluorisens-basert sanntids kvantitativ polymerase kjedereaksjon (qPCR) er det essensielt med både egnede gener og en detaljert protokoll. Målet med undersøkelsen var å kunne vurdere, presentere og tolke genuttrykk. I denne oppgaven valgte vi å undrsøke endringen i mengden genuttrykk av MHC1, MHC2a og MHC2x før trening og etter 2 uker med styrketrening.
 
-Den reduserte mengden genuttrykk for MCH1 og MHC2x og den økte mengden genuttrykk av MHC2a virker å være fornuftige. Tabell 1 i @terzisResistanceExerciseinducedIncrease2007 biser blant annet at etter 14 uker med styrketrening har prosentandelen av MHC2a økt. \@andersenMyosinHeavyChain2000 viser også at styrektrening reduserer muskelfibertype MCH2x og øker MHC2a. Dette ser ut til å stemme over ens med våre resultater som vises i tabell 1.
+Vi har undersøkt antall sykluser som trengs for å nå CT for de bestemte genene, der færre sykluser indikerer et større genuttrykk. Genutrykket for MCH2x var det som trengte flest sykluser for å nå CT ved uke 2, mens for både MCH1 Og MCH2a har antall sykluser til CT sunket. Dette tyder på at genuttrykket til MCH1 og MHC2a har økt mens MHC2x har sunket.
 
-Endringen i genuttrykk av MHC2a og MHC2x er stor. Dette kan være at vi i vårt tilfelle har hatt en prøve fra en veldig utrent person, men det kan også være en feil i eksperimentet. I @andersenMyosinHeavyChain2000 beskrives det at ved å øke muskelaktiviteten, enten gjennom styrke- eller utholdenhetstrening, slås MHC2x-genet av noe som resulterer i en forhøyet andel MHC2a-gen. Ved inaktivitet reverseres denne prosessen, noe som gjør forekomsten av MHC2x mer vanlig hos inaktive mennekser.
+Den reduserte mengden genuttrykk for MCH1 og MHC2x og den økte mengden genuttrykk av MHC2a virker å være fornuftige. Tabell 1 i @terzis2007 viser blant annet at etter 14 uker med styrketrening har prosentandelen av muskelfibertype 2a økt. @andersen2000 viser også at styrektrening reduserer muskelfibertype MCH2x og øker MHC2a. Dette ser ut til å stemme over ens med våre resultater som vises i tabell 1.
 
-Vi har også sett på antall sykluser som trengs for å nå CT for de bestemte genene, der færre sykluser indikerer et større genuttrykk. Genutrykket for MCH2x var det som trengte flest sykluser for å nå CT ved uke 2, mens for både MCH! Og MCH2a har antall sykluser til CT sunket. Årsaker til dette kan være at genuttrykket til MCH1 og MHC2a har økt mens MHC2x har sunket, men det kan også være feil i gjennomføringen av eksperimentet.
+Endringen i genuttrykk av MHC2a og MHC2x er stor. Dette kan tyde på at vi analyserte en prøve fra en veldig utrent person. Siden vi på forhånd ikke fikk noe informasjon om forsøkspersonen vi analyserte prøven fra, blir dette likevel vanskelig å fastslå. I @andersen2000 beskrives det at ved å øke muskelaktiviteten, enten gjennom styrke- eller utholdenhetstrening, slås MHC2x-genet av noe som resulterer i en forhøyet andel MHC2a-gen. Dette stemmer godt med våre observasjoner. Ved inaktivitet reverseres denne prosessen, noe som gjør forekomsten av MHC2x mer vanlig hos inaktive mennekser.
 
 # Konklusjon
 
-Styrketrening viser seg å gi endringer som en forhøyet andel MHC2a-gen blir mer dominant sammenlignet med type 1 og type 2x.
+Denne analysen av genuttrykk for ulike myosin tungkjeder indikerer at styrketrening bidrar til endringer som et forhøyet uttrykk av MHC2a i forhold til MHC1 og MHC2x.
 
 \newpage
 
